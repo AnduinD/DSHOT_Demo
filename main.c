@@ -1,9 +1,5 @@
 #include "main.h"
-//RobotPRM_Struct Infantry;
-//Status_t *status;
-//extern Status_t Status;
-//extern short FrictionWheel_speed;
-extern uint16_t throttle;//ÓÍÃÅÖµ
+extern uint16_t throttle;//æ²¹é—¨å€¼
 /**
   * @brief  Main Function
   * @param  None
@@ -11,16 +7,12 @@ extern uint16_t throttle;//ÓÍÃÅÖµ
   */
 int main()
 {
-	//System_Configration();
-	//System_Init();
-    //SysTick_Config(168000);
-    //delay_ms(7000);
-    throttle=0;                //¸øÒ»¶ÎÊ±¼äµÄÓÍÃÅÁãµã¼ì²â£¨½âËø£©
-    TIM8_Configuration();      //Ä¦²ÁÂÖÍ¨ÐÅµÄDSHOTÐ­ÒéÓÃ
+    throttle=0;                //ç»™ä¸€æ®µæ—¶é—´çš„æ²¹é—¨é›¶ç‚¹æ£€æµ‹ï¼ˆè§£é”ï¼‰
+    TIM8_Configuration();      //æ‘©æ“¦è½®é€šä¿¡çš„DSHOTåè®®ç”¨
     delay_ms(80000);
-    throttle=200;              //Ëæ±ãÊä³öÒ»¸öÓÍÃÅÖµÏÈ
+    throttle=200;              //éšä¾¿è¾“å‡ºä¸€ä¸ªæ²¹é—¨å€¼å…ˆ
 //	delay_ms(40000);
-//  throttle=200;              //¸ÄÒ»ÏÂÓÍÃÅÖµ
+//  throttle=200;              //æ”¹ä¸€ä¸‹æ²¹é—¨å€¼
 //  delay_ms(40000);
 	
 //    int tick=0;
@@ -30,92 +22,7 @@ int main()
 //        delay_ms(8000);
     }
 } 
-/**
-  * @brief  Configuration 
-  * @param  None
-  * @retval None
-  */
-void System_Configration()
-{
-//	LASER_Configration();
-//	delay_ms(100);
-	//TIM8_Configuration();      //Ä¦²ÁÂÖÍ¨ÐÅµÄDSHOTÐ­ÒéÓÃ
-	//delay_ms(100);
-//	FrictionWheel_Configration();
-//    delay_ms(100);
-//	TIM8_Configuration();
-//	USART1_Configuration();    //ºÍÒ£¿ØÆ÷
-//	delay_ms(100);
-//    USART6_Configuration();    //ºÍTx2
-//	delay_ms(100);
-//  CAN1_Configration();
-//	delay_ms(100);
-//	CAN2_Configration();
-//	delay_ms(10000);
-}
-/**
-  * @brief  Parameter 
-  * @param  None
-  * @retval None
-  */
-void System_Init(void)
-{
-//	ZeroCheck_Init();
-//	InfantryidInit();
-//	Pid_ChassisWheelInit();
-//	Pid_ChassisPosition();
-//	Pid_BodanMotorPos();
-//	Pid_BodanMotorSpeed();
-//	Pid_YawGyroPosSpeed();
-//	Pid_PitchGyroPosSpeed();
-//	Pid_Pitch_MotorPos_GyroSpeed();
-//	Pid_Yaw_MotorPos_GyroSpeed();
-//	status = GetStatusAdress();
-}
-/**
-  * @brief  System timer 
-  * @param  None
-  * @retval None
-  */
-//extern short RC_DisConnect;
-//extern short F105_DisConect;
-void SysTick_Handler(void)
-{
-//	/*µç»ú¹ýÁã¼ì²â*/
-//	ZeroCheck_cal();
-//	/*×´Ì¬»ú*/
-//	Status_Act();
-//	/*Ä¦²ÁÂÖ¿ØÖÆ*/
-//	FrictionWheel_Set(FrictionWheel_speed);
-//	/*ÔÆÌ¨µ×ÅÌ·¢Éä»ú¹¹¿ØÖÆ*/
-//	if(Status.GimbalMode != Gimbal_Powerdown_Mode)
-//        Gimbal_CurrentPid_Cal();
-//	BodanMotor_CurrentPid_Cal();
-//	Chassis_CurrentPid_Cal();
-//	/*Tx2Í¨ÐÅ*/
-//	USART6_SendtoPC();
-//	/*Ò£¿ØÆ÷µôÏß¼ì²â*/
-//	if(RC_DisConnect>1000)
-//		RC_Rst();
-//	RC_DisConnect++;
-//	/*µçÈÝ°åµôÏß¼ì²â*/
-//	if(F105_DisConect>1500)
-//		F105_Rst();
-//	F105_DisConect++;
-}
 
-///**
-//  * @brief  Infantry parameter initialization
-//  * @param  None
-//  * @retval None
-//  */
-//void InfantryidInit(void)
-//{
-//	Infantry.Yaw_init=1374;
-//	Infantry.Pitch_init=6419;  
-//	Infantry.MagClose=2900;
-//	Infantry.MagOpen=1300;
-//}
 /**
   * @brief  Millisecond delay
   * @param  None
